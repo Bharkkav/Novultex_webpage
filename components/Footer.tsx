@@ -17,8 +17,8 @@ export default function Footer() {
               Engineering embedded, IoT, and software solutions that connect the physical and digital world.
             </p>
             <p className="text-gray-500 text-sm">
-              <a href="mailto:hello@Novultex.com" className="hover:text-accent transition-colors">
-                hello@Novultex.com
+              <a href="mailto:info@novultex.com" className="hover:text-accent transition-colors">
+                info@novultex.com
               </a>
             </p>
           </div>
