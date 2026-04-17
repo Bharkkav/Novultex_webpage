@@ -46,7 +46,7 @@ export default function Contact() {
       `Project details:\n${formData.message}`
     )
 
-    window.location.href = `mailto:hello@Novultex.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@Novultex.com?subject=${subject}&body=${body}`
 
     setTimeout(() => {
       setSubmitted(true)
@@ -221,7 +221,7 @@ export default function Contact() {
                   Prefer to talk? We offer free 30-minute discovery calls to understand your project and see if we're the right fit.
                 </p>
                 <Link
-                  href="mailto:hello@Novultex.com?subject=Book a Call with Novultex"
+                  href="mailto:info@Novultex.com?subject=Book a Call with Novultex"
                   className="btn btn--primary text-sm w-full text-center"
                 >
                   Schedule a Call →
@@ -235,8 +235,8 @@ export default function Contact() {
                   <div>
                     <span className="text-gray-500">Email</span>
                     <p>
-                      <a href="mailto:hello@Novultex.com" className="text-accent hover:underline">
-                        hello@Novultex.com
+                      <a href="mailto:info@Novultex.com" className="text-accent hover:underline">
+                        info@Novultex.com
                       </a>
                     </p>
                   </div>
