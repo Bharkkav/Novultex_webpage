@@ -1,0 +1,22 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark blue background -->
+  <rect width="256" height="256" fill="#0f3a7d"/>
+  
+  <!-- Main bracket design -->
+  <g stroke="white" stroke-width="20" fill="none">
+    <!-- Left bracket -->
+    <path d="M 60 40 L 40 40 L 40 216 L 60 216"/>
+    
+    <!-- Top horizontal line -->
+    <line x1="60" y1="100" x2="196" y2="100"/>
+    
+    <!-- Center vertical bar -->
+    <line x1="100" y1="140" x2="100" y2="180"/>
+    
+    <!-- Bottom section rectangle -->
+    <rect x="50" y="140" width="150" height="70" fill="none" stroke="white" stroke-width="20"/>
+    
+    <!-- Right bracket -->
+    <path d="M 196 40 L 216 40 L 216 216 L 196 216"/>
+  </g>
+</svg>

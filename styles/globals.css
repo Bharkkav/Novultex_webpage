@@ -1,0 +1,167 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply bg-dark text-white font-sans;
+  background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6 md:px-8;
+}
+
+/* BUTTONS */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer no-underline;
+}
+
+.btn--primary {
+  @apply bg-accent text-black hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn--ghost {
+  @apply border-2 border-accent text-accent hover:bg-accent hover:bg-opacity-10;
+}
+
+.btn--white {
+  @apply bg-white text-black hover:bg-opacity-90;
+}
+
+.btn--ghost-white {
+  @apply border-2 border-white text-white hover:bg-white hover:bg-opacity-10;
+}
+
+.btn--lg {
+  @apply px-8 py-4 text-lg;
+}
+
+.btn--full {
+  @apply w-full;
+}
+
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* LINKS */
+.link-arrow {
+  @apply text-accent hover:text-opacity-80 transition-all inline-flex items-center gap-2;
+}
+
+/* BADGES */
+.badge {
+  @apply bg-accent bg-opacity-10 text-accent px-3 py-1 rounded-full text-sm font-medium inline-block;
+}
+
+/* SECTION */
+.section {
+  @apply py-20 md:py-32;
+}
+
+.section__tag {
+  @apply text-accent text-sm font-semibold uppercase tracking-wider;
+}
+
+.section__title {
+  @apply text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight;
+}
+
+.section__sub {
+  @apply text-gray-300 text-lg max-w-2xl;
+}
+
+.section__header {
+  @apply text-center mb-16;
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* FORM STYLES */
+.form-group {
+  @apply mb-6;
+}
+
+.form-group label {
+  @apply block text-sm font-medium mb-2 text-gray-200;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  @apply w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-50 border border-gray-700 text-white placeholder-gray-500 transition-all focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent focus:ring-opacity-20;
+}
+
+.form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.form-note {
+  @apply text-sm text-gray-400 mt-4;
+}
+
+.form-success {
+  @apply hidden bg-green-500 bg-opacity-10 border border-green-500 text-green-400 px-4 py-3 rounded-lg mt-4;
+}
+
+.form-success.show {
+  @apply block;
+}
+
+/* GRID ANIMATIONS */
+.grid {
+  @apply gap-6 md:gap-8;
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-80;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section {
+    @apply py-12;
+  }
+
+  .section__title {
+    @apply text-3xl;
+  }
+}

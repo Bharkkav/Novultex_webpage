@@ -1,0 +1,38 @@
+import { useEffect, useRef, useCallback } from 'react'
+
+export function useIntersectionObserver() {
+  const refs = useRef<Map<string, HTMLElement>>(new Map())
+
+  const setRefs = useCallback((el: HTMLElement | null, key: string) => {
+    if (el) {
+      el.classList.add('fade-in')
+      refs.current.set(key, el)
+    }
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    )
+
+    refs.current.forEach((el) => {
+      observer.observe(el)
+    })
+
+    return () => {
+      refs.current.forEach((el) => {
+        observer.unobserve(el)
+      })
+    }
+  }, [])
+
+  return { setRefs }
+}
