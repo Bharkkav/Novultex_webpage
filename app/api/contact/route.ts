@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail({
       from: body.email,
-      to: 'hello@Novultex.com',
+      to: 'info@novultex.com',
       subject: `Project Inquiry: ${body.service} — ${body.name}`,
       html: `
         <h2>${body.service}</h2>
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY!)
 
     await sgMail.send({
-      to: 'hello@Novultex.com',
+      to: 'info@Novultex.com',
       from: process.env.SENDGRID_FROM_EMAIL!,
       replyTo: body.email,
       subject: `Project Inquiry: ${body.service} — ${body.name}`,
