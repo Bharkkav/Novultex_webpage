@@ -149,7 +149,7 @@ body {
 }
 
 .form-group label {
-  @apply block text-sm font-medium mb-2 text-gray-200;
+  @apply block text-sm font-medium mb-2 text-slate-800;
 }
 
 .form-group input,
