@@ -13,13 +13,20 @@ function WhatsAppIcon() {
   )
 }
 
+function MailIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+      <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.12-.25 6.3 5.15a.9.9 0 0 0 1.16 0l6.3-5.15H5.12Zm14.38 1.94-5.81 4.75a2.4 2.4 0 0 1-3.04 0L4.5 8.44v8.81c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V8.44Z" />
+    </svg>
+  )
+}
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: '',
-    budget: '',
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
@@ -37,7 +44,7 @@ export default function Contact() {
     setLoading(true)
 
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.service || !formData.message) {
+    if (!formData.name || !formData.email || !formData.service) {
       alert('Please fill in all required fields')
       setLoading(false)
       return
@@ -49,16 +56,15 @@ export default function Contact() {
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
       `Company: ${formData.company || 'N/A'}\n` +
-      `Service: ${formData.service}\n` +
-      `Budget: ${formData.budget || 'Prefer to discuss'}\n\n` +
-      `Project details:\n${formData.message}`
+      `Service: ${formData.service}\n\n` +
+      `Project details:\n${formData.message || 'Not provided'}`
     )
 
     window.location.href = `mailto:info@Novultex.com?subject=${subject}&body=${body}`
 
     setTimeout(() => {
       setSubmitted(true)
-      setFormData({ name: '', email: '', company: '', service: '', budget: '', message: '' })
+      setFormData({ name: '', email: '', company: '', service: '', message: '' })
       setLoading(false)
     }, 1000)
   }
@@ -164,29 +170,8 @@ export default function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="budget" className="block text-sm font-medium mb-2">
-                    Approximate Budget
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white border border-sky-100 text-slate-900 focus:border-brand focus:ring-2 focus:ring-sky-200 transition-all"
-                  >
-                    <option value="">Select a range</option>
-                    <option>Under $500</option>
-                    <option>$500 – $2,000</option>
-                    <option>$2,000 – $10,000</option>
-                    <option>$10,000 – $50,000</option>
-                    <option>$50,000+</option>
-                    <option>Prefer to discuss</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Project Description <span className="text-accent">*</span>
+                    Project Description
                   </label>
                   <textarea
                     id="message"
@@ -195,7 +180,6 @@ export default function Contact() {
                     onChange={handleChange}
                     rows={6}
                     placeholder="Tell us about your project — what you're building, what problem you're solving, and any technical details you already know."
-                    required
                     className="w-full px-4 py-3 rounded-lg bg-white border border-sky-100 text-slate-900 placeholder-slate-400 focus:border-brand focus:ring-2 focus:ring-sky-200 transition-all resize-none"
                   />
                 </div>
@@ -244,7 +228,9 @@ export default function Contact() {
                     <span className="text-slate-500">Email</span>
                     <p>
                       <a href="mailto:info@Novultex.com" className="text-accent hover:underline inline-flex items-center gap-2">
-                        <span aria-hidden="true">✉</span>
+                        <span aria-hidden="true">
+                          <MailIcon />
+                        </span>
                         <span>info@Novultex.com</span>
                       </a>
                     </p>

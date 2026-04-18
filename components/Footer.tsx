@@ -9,6 +9,14 @@ function WhatsAppIcon() {
   )
 }
 
+function MailIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+      <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.12-.25 6.3 5.15a.9.9 0 0 0 1.16 0l6.3-5.15H5.12Zm14.38 1.94-5.81 4.75a2.4 2.4 0 0 1-3.04 0L4.5 8.44v8.81c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V8.44Z" />
+    </svg>
+  )
+}
+
 export default function Footer() {
   return (
     <footer className="bg-white/85 border-t border-sky-100">
@@ -31,7 +39,9 @@ export default function Footer() {
             </p>
             <p className="text-slate-500 text-sm mb-2">
               <a href="mailto:info@novultex.com" className="hover:text-primary transition-colors inline-flex items-center gap-2">
-                <span className="text-primary" aria-hidden="true">✉</span>
+                <span className="text-primary">
+                  <MailIcon />
+                </span>
                 <span>info@novultex.com</span>
               </a>
             </p>
@@ -96,7 +106,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-sky-100 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-            <p>© 2025 Novultex Technologies. All rights reserved.</p>
+            <p>© 2026 Novultex (PVT) LTD. All rights reserved.</p>
             <p>Built by Bharkkav</p>
           </div>
         </div>
