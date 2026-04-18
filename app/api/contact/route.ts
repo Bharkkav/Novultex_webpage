@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail({
       from: body.email,
-      to: 'info@novultex.com',
+      to: 'hello@Novultex.com',
       subject: `Project Inquiry: ${body.service} — ${body.name}`,
       html: `
         <h2>${body.service}</h2>

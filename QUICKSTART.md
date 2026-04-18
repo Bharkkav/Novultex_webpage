@@ -51,7 +51,7 @@ Follow prompts and your site is live!
 ## 📝 Common Customizations
 
 ### Change Email
-Search for `hello@Novultex.com` and replace everywhere
+Search for `info@Novultex.com` and replace everywhere
 
 ### Change Brand Color
 Edit `tailwind.config.js`:

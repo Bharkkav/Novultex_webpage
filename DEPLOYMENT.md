@@ -188,7 +188,7 @@ On Vercel/Netlify:
 
 ## ✅ Pre-Deployment Checklist
 
-- [ ] Update `hello@Novultex.com` to your email
+- [ ] Update `info@Novultex.com` to your email
 - [ ] Update company name/branding
 - [ ] Test contact form locally
 - [ ] Optimize images (compress and place in `public/`)

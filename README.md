@@ -99,7 +99,7 @@ Novultex-nextjs/
 ## 🎨 Customization
 
 ### Update Email Address
-Replace `hello@Novultex.com` in:
+Replace `info@Novultex.com` in:
 - `/components/Footer.tsx`
 - `/app/contact/page.tsx`
 - Footer in all pages
