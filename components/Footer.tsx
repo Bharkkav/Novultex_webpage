@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -8,9 +9,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4 no-underline">
-              <div className="h-8 w-8 bg-accent rounded flex items-center justify-center">
-                <span className="font-bold text-black text-sm">Z</span>
-              </div>
+              <Image
+                src="/assets/company-logo.png"
+                alt="Novultex logo"
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain"
+              />
               <span className="font-bold text-lg">Novultex</span>
             </Link>
             <p className="text-gray-400 text-sm mb-4">
@@ -64,7 +69,7 @@ export default function Footer() {
           {/* CTA */}
           <div>
             <h5 className="font-semibold mb-4">Start a Project</h5>
-            <p className="text-gray-400 text-sm mb-4">Have an idea? Let's talk about making it real.</p>
+            <p className="text-gray-400 text-sm mb-4">Have an idea? Let&apos;s talk about making it real.</p>
             <Link href="/contact#quote" className="btn btn--primary text-sm">
               Get in Touch
             </Link>

@@ -3,7 +3,6 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function About() {
   const values = [
@@ -126,10 +125,10 @@ export default function About() {
                 With deep expertise across embedded systems, IoT architecture, PCB design, and software development, Bharkkav founded Novultex Technologies to create a firm where quality engineering and client satisfaction are never in conflict.
               </p>
               <blockquote className="text-lg italic text-gray-300 border-l-4 border-accent pl-4 mb-6">
-                "I started Novultex because I believe that real engineering — careful, tested, well-thought-out engineering — can solve almost any problem. Every client who brings us a challenge gets my personal commitment to making it work."
+                &ldquo;I started Novultex because I believe that real engineering - careful, tested, well-thought-out engineering - can solve almost any problem. Every client who brings us a challenge gets my personal commitment to making it work.&rdquo;
               </blockquote>
               <Link href="/contact" className="btn btn--primary">
-                Let's Work Together
+                Let&apos;s Work Together
               </Link>
             </div>
           </div>
@@ -142,7 +141,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Have a Project in Mind?</h2>
-              <p className="text-lg opacity-90">We'd love to hear about it. Share your idea and let's explore how Novultex can bring it to life.</p>
+              <p className="text-lg opacity-90">We&apos;d love to hear about it. Share your idea and let&apos;s explore how Novultex can bring it to life.</p>
             </div>
             <div className="flex flex-col md:flex-row gap-4 flex-shrink-0">
               <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90">

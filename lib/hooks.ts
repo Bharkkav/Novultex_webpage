@@ -11,6 +11,7 @@ export function useIntersectionObserver() {
   }, [])
 
   useEffect(() => {
+    const elements = refs.current
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -23,12 +24,12 @@ export function useIntersectionObserver() {
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     )
 
-    refs.current.forEach((el) => {
+    elements.forEach((el) => {
       observer.observe(el)
     })
 
     return () => {
-      refs.current.forEach((el) => {
+      elements.forEach((el) => {
         observer.unobserve(el)
       })
     }

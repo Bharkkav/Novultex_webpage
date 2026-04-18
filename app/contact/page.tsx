@@ -64,7 +64,7 @@ export default function Contact() {
         <div className="container text-center">
           <span className="section__tag">Contact</span>
           <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
-            Let's Build Something<br /><em className="text-accent">Together</em>
+            Let&apos;s Build Something<br /><em className="text-accent">Together</em>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Share your project idea, ask a technical question, or request a quote. We respond to every message personally — usually within 24 hours.
@@ -80,7 +80,7 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-3">Send Us a Message</h2>
               <p className="text-gray-300 mb-8">
-                Fill in the details below and we'll get back to you with a thoughtful response.
+                Fill in the details below and we&apos;ll get back to you with a thoughtful response.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -134,7 +134,7 @@ export default function Contact() {
 
                 <div className="form-group">
                   <label htmlFor="service" className="block text-sm font-medium mb-2">
-                    Service You're Interested In <span className="text-accent">*</span>
+                    Service You&apos;re Interested In <span className="text-accent">*</span>
                   </label>
                   <select
                     id="service"
@@ -201,12 +201,12 @@ export default function Contact() {
                 </button>
 
                 <p className="text-sm text-gray-400">
-                  We'll respond within 24 hours. Your information is never shared.
+                  We&apos;ll respond within 24 hours. Your information is never shared.
                 </p>
 
                 {submitted && (
                   <div className="bg-green-500 bg-opacity-10 border border-green-500 text-green-400 px-4 py-3 rounded-lg">
-                    <span>✓</span> Thank you! Your message has been sent. We'll be in touch shortly.
+                    <span>✓</span> Thank you! Your message has been sent. We&apos;ll be in touch shortly.
                   </div>
                 )}
               </form>
@@ -218,7 +218,7 @@ export default function Contact() {
               <div id="call" className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-3">Book a Call</h3>
                 <p className="text-gray-300 mb-4">
-                  Prefer to talk? We offer free 30-minute discovery calls to understand your project and see if we're the right fit.
+                  Prefer to talk? We offer free 30-minute discovery calls to understand your project and see if we&apos;re the right fit.
                 </p>
                 <Link
                   href="mailto:info@Novultex.com?subject=Book a Call with Novultex"

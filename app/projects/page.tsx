@@ -108,7 +108,7 @@ export default function Projects() {
             Projects That<br /><em className="text-accent">Speak for Themselves</em>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            A selection of systems we've built — embedded hardware, IoT platforms, PCB designs, and software solutions delivered to clients across the globe.
+            A selection of systems we&apos;ve built - embedded hardware, IoT platforms, PCB designs, and software solutions delivered to clients across the globe.
           </p>
         </div>
       </section>
@@ -204,9 +204,9 @@ export default function Projects() {
       {/* BUILD WITH US */}
       <section className="section bg-black bg-opacity-30">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-4">Don't See Your Industry?</h2>
+          <h2 className="text-4xl font-bold mb-4">Don&apos;t See Your Industry?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
-            These are just examples. Novultex has worked across automotive, agriculture, healthcare, logistics, home automation, industrial, and more. If your project involves embedded systems, IoT, PCB, or software — we're the right team.
+            These are just examples. Novultex has worked across automotive, agriculture, healthcare, logistics, home automation, industrial, and more. If your project involves embedded systems, IoT, PCB, or software - we&apos;re the right team.
           </p>
           <Link href="/contact" className="btn btn--primary btn--lg">
             Tell Us About Your Project
@@ -220,7 +220,7 @@ export default function Projects() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Ready to Build Your Project?</h2>
-              <p className="text-lg opacity-90">Start with a conversation. We'll assess your needs and propose the right approach.</p>
+              <p className="text-lg opacity-90">Start with a conversation. We&apos;ll assess your needs and propose the right approach.</p>
             </div>
             <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90 text-lg flex-shrink-0">
               Get a Quote

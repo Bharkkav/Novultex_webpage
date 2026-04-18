@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
@@ -35,9 +36,14 @@ export default function Navigation() {
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 no-underline">
-          <div className="h-8 w-8 bg-accent rounded flex items-center justify-center">
-            <span className="font-bold text-black text-sm">Z</span>
-          </div>
+          <Image
+            src="/assets/company-logo.png"
+            alt="Novultex logo"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain"
+            priority
+          />
           <span className="font-bold text-xl tracking-tight">Novultex</span>
         </Link>
 

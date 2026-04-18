@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -190,7 +189,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Ready to Build Something Exceptional?</h2>
-              <p className="text-lg opacity-90">Let's turn your idea into a working system. Share your concept and we'll tell you exactly how we'd approach it.</p>
+              <p className="text-lg opacity-90">Let&apos;s turn your idea into a working system. Share your concept and we&apos;ll tell you exactly how we&apos;d approach it.</p>
             </div>
             <div className="flex flex-col md:flex-row gap-4 flex-shrink-0">
               <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90">

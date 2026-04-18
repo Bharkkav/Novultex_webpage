@@ -184,7 +184,7 @@ export default function Services() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Not Sure Which Service You Need?</h2>
-              <p className="text-lg opacity-90">Tell us about your project and we'll recommend the right approach — honestly and without pressure.</p>
+              <p className="text-lg opacity-90">Tell us about your project and we&apos;ll recommend the right approach - honestly and without pressure.</p>
             </div>
             <div className="flex-shrink-0">
               <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90 text-lg">
