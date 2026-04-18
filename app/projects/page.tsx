@@ -97,7 +97,7 @@ export default function Projects() {
     : projects.filter(p => p.cats.includes(activeFilter))
 
   return (
-    <main className="bg-dark text-white">
+    <main className="site-shell">
       <Navigation />
 
       {/* PAGE HERO */}
@@ -107,7 +107,7 @@ export default function Projects() {
           <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
             Projects That<br /><em className="text-accent">Speak for Themselves</em>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             A selection of systems we&apos;ve built - embedded hardware, IoT platforms, PCB designs, and software solutions delivered to clients across the globe.
           </p>
         </div>
@@ -123,8 +123,8 @@ export default function Projects() {
                 onClick={() => setActiveFilter(filter.key)}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${
                   activeFilter === filter.key
-                    ? 'bg-accent text-black'
-                    : 'bg-gray-900 text-gray-300 hover:bg-gray-800'
+                    ? 'bg-primary text-white shadow-md shadow-sky-100'
+                    : 'bg-white text-slate-600 border border-sky-100 hover:bg-sky-50'
                 }`}
               >
                 {filter.label}
@@ -142,7 +142,7 @@ export default function Projects() {
               <button
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-8 rounded-xl hover:border-accent hover:shadow-lg transition-all duration-300 text-left"
+                className="card-surface p-8 hover:border-brand hover:shadow-lg hover:shadow-sky-100 transition-all duration-300 text-left"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -150,13 +150,13 @@ export default function Projects() {
                       <span key={tag} className="badge mr-2">{tag}</span>
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-gray-500">{project.num}</span>
+                  <span className="text-sm font-bold text-slate-400">{project.num}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                <p className="text-gray-300 mb-6">{project.desc}</p>
+                <h3 className="text-2xl font-bold mb-4 text-slate-900">{project.title}</h3>
+                <p className="text-slate-600 mb-6">{project.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <span key={t} className="bg-gray-800 text-gray-300 px-3 py-1 rounded text-sm">{t}</span>
+                    <span key={t} className="bg-sky-50 text-slate-600 border border-sky-100 px-3 py-1 rounded text-sm">{t}</span>
                   ))}
                 </div>
               </button>
@@ -166,10 +166,10 @@ export default function Projects() {
           {/* PROJECT MODAL */}
           {selectedProject && (
             <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => setSelectedProject(null)}>
-              <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-8 max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
+              <div className="bg-white border border-sky-100 rounded-xl p-8 max-w-2xl w-full shadow-2xl shadow-slate-900/10 relative" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-white"
+                  className="absolute top-4 right-4 text-3xl text-slate-400 hover:text-primary"
                 >
                   ×
                 </button>
@@ -180,14 +180,14 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4">{selectedProject.title}</h3>
-                <p className="text-gray-300 mb-6 text-lg">{selectedProject.desc}</p>
+                <h3 className="text-3xl font-bold mb-4 text-slate-900">{selectedProject.title}</h3>
+                <p className="text-slate-600 mb-6 text-lg">{selectedProject.desc}</p>
 
                 <div className="mb-6">
                   <h4 className="font-bold mb-3 text-accent">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tech.map((t: string) => (
-                      <span key={t} className="bg-gray-800 text-gray-300 px-3 py-1 rounded text-sm">{t}</span>
+                      <span key={t} className="bg-sky-50 text-slate-600 border border-sky-100 px-3 py-1 rounded text-sm">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -202,10 +202,10 @@ export default function Projects() {
       </section>
 
       {/* BUILD WITH US */}
-      <section className="section bg-black bg-opacity-30">
+      <section className="section section-soft">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-4">Don&apos;t See Your Industry?</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto mb-8 text-lg">
             These are just examples. Novultex has worked across automotive, agriculture, healthcare, logistics, home automation, industrial, and more. If your project involves embedded systems, IoT, PCB, or software - we&apos;re the right team.
           </p>
           <Link href="/contact" className="btn btn--primary btn--lg">
@@ -215,14 +215,14 @@ export default function Projects() {
       </section>
 
       {/* CTA BAND */}
-      <section className="bg-gradient-to-r from-accent to-accent/80 text-black py-16">
+      <section className="cta-band py-16">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Ready to Build Your Project?</h2>
-              <p className="text-lg opacity-90">Start with a conversation. We&apos;ll assess your needs and propose the right approach.</p>
+              <p className="text-lg text-white/90">Start with a conversation. We&apos;ll assess your needs and propose the right approach.</p>
             </div>
-            <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90 text-lg flex-shrink-0">
+            <Link href="/contact#quote" className="btn btn--white text-lg flex-shrink-0">
               Get a Quote
             </Link>
           </div>

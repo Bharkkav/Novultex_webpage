@@ -115,7 +115,7 @@ export default function Services() {
   ]
 
   return (
-    <main className="bg-dark text-white">
+    <main className="site-shell">
       <Navigation />
 
       {/* PAGE HERO */}
@@ -125,7 +125,7 @@ export default function Services() {
           <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
             What Novultex<br /><em className="text-accent">Builds For You</em>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             From a single embedded component to a complete IoT ecosystem — we deliver engineering with depth, precision, and professionalism.
           </p>
         </div>
@@ -141,17 +141,17 @@ export default function Services() {
                   <div className="text-5xl font-bold text-accent">{service.num}</div>
                   <div>
                     <h2 className="text-4xl font-bold mb-2">{service.title}</h2>
-                    <p className="text-lg text-gray-300">{service.subtitle}</p>
+                    <p className="text-lg text-slate-600">{service.subtitle}</p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   <div className="lg:col-span-2">
-                    <p className="text-gray-300 mb-4 text-lg">{service.desc}</p>
-                    {service.desc2 && <p className="text-gray-300 mb-6 text-lg">{service.desc2}</p>}
+                    <p className="text-slate-600 mb-4 text-lg">{service.desc}</p>
+                    {service.desc2 && <p className="text-slate-600 mb-6 text-lg">{service.desc2}</p>}
                     <ul className="space-y-3 mb-8">
                       {service.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-gray-300">
+                        <li key={item} className="flex items-start gap-3 text-slate-600">
                           <span className="text-accent mt-1 flex-shrink-0">✓</span>
                           <span>{item}</span>
                         </li>
@@ -160,34 +160,34 @@ export default function Services() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-6 rounded-xl">
+                    <div className="card-surface p-6">
                       <h4 className="font-bold mb-3 text-accent">Ideal For</h4>
-                      <p className="text-sm text-gray-300">{service.ideal}</p>
+                      <p className="text-sm text-slate-600">{service.ideal}</p>
                     </div>
-                    <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-6 rounded-xl">
+                    <div className="card-surface p-6">
                       <h4 className="font-bold mb-3 text-accent">Deliverables</h4>
-                      <p className="text-sm text-gray-300">{service.deliverable}</p>
+                      <p className="text-sm text-slate-600">{service.deliverable}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {idx < services.length - 1 && <div className="border-t border-gray-800 my-12"></div>}
+              {idx < services.length - 1 && <div className="border-t border-sky-100 my-12"></div>}
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA BAND */}
-      <section className="bg-gradient-to-r from-accent to-accent/80 text-black py-16">
+      <section className="cta-band py-16">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Not Sure Which Service You Need?</h2>
-              <p className="text-lg opacity-90">Tell us about your project and we&apos;ll recommend the right approach - honestly and without pressure.</p>
+              <p className="text-lg text-white/90">Tell us about your project and we&apos;ll recommend the right approach - honestly and without pressure.</p>
             </div>
             <div className="flex-shrink-0">
-              <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90 text-lg">
+              <Link href="/contact#quote" className="btn btn--white text-lg">
                 Talk to Us
               </Link>
             </div>

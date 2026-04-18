@@ -32,19 +32,19 @@ export default function Navigation() {
   ]
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark bg-opacity-95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg shadow-sky-100/80 border-b border-sky-100' : 'bg-white/60 backdrop-blur-sm'}`}>
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 no-underline">
           <Image
             src="/assets/company-logo.png"
             alt="Novultex logo"
-            width={48}
-            height={48}
-            className="h-12 w-12 object-contain"
+            width={64}
+            height={64}
+            className="h-16 w-16 object-contain"
             priority
           />
-          <span className="font-bold text-xl tracking-tight">Novultex</span>
+          <span className="font-bold text-xl tracking-tight text-slate-900">Novultex</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export default function Navigation() {
               className={`transition-colors ${
                 isActive(link.href)
                   ? 'text-accent font-medium'
-                  : 'text-gray-300 hover:text-white'
+                  : 'text-slate-600 hover:text-primary'
               }`}
             >
               {link.label}
@@ -75,15 +75,15 @@ export default function Navigation() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <span className="w-6 h-0.5 bg-white transition-all"></span>
-          <span className="w-6 h-0.5 bg-white transition-all"></span>
-          <span className="w-6 h-0.5 bg-white transition-all"></span>
+          <span className="w-6 h-0.5 bg-slate-900 transition-all"></span>
+          <span className="w-6 h-0.5 bg-slate-900 transition-all"></span>
+          <span className="w-6 h-0.5 bg-slate-900 transition-all"></span>
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-dark bg-opacity-95 backdrop-blur-md">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-sky-100">
           <nav className="container py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
@@ -92,7 +92,7 @@ export default function Navigation() {
                 className={`py-2 transition-colors ${
                   isActive(link.href)
                     ? 'text-accent font-medium'
-                    : 'text-gray-300 hover:text-white'
+                    : 'text-slate-600 hover:text-primary'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

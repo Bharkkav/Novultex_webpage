@@ -15,7 +15,7 @@ export default function About() {
   ]
 
   return (
-    <main className="bg-dark text-white">
+    <main className="site-shell">
       <Navigation />
 
       {/* PAGE HERO */}
@@ -25,7 +25,7 @@ export default function About() {
           <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
             The Team Behind<br /><em className="text-accent">Novultex Technologies</em>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             We are a focused engineering company dedicated to building customized embedded, IoT, and software systems that actually work — in the real world, for real clients.
           </p>
         </div>
@@ -38,13 +38,13 @@ export default function About() {
             <div>
               <span className="section__tag">Our Story</span>
               <h2 className="section__title">Founded on Engineering,<br />Driven by Purpose</h2>
-              <p className="text-gray-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 Novultex Technologies was founded by Bharkkav with one clear goal: to bridge the gap between complex engineering and practical outcomes. Too many innovative ideas fail not because the concept is wrong, but because the execution lacks depth.
               </p>
-              <p className="text-gray-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 We started with embedded systems — writing firmware, designing circuits, building hardware that interacts with the physical world. Over time, our scope grew: IoT connectivity, PCB design, software platforms, and end-to-end system delivery became our signature.
               </p>
-              <p className="text-gray-300">
+              <p className="text-slate-600">
                 Today, Novultex serves clients across borders, bringing a level of precision and care that larger firms often miss. We keep our team tight and our standards high.
               </p>
             </div>
@@ -55,10 +55,10 @@ export default function About() {
                 { num: '02', title: 'Evolved', desc: 'Expanded into PCB design, complete IoT projects, and full-stack software development.' },
                 { num: '03', title: 'Growing', desc: 'Now serving clients globally — with the same personal attention as day one.' },
               ].map((card) => (
-                <div key={card.num} className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-8 rounded-xl">
-                  <div className="text-4xl font-bold text-accent mb-4">{card.num}</div>
-                  <h4 className="text-xl font-bold mb-3">{card.title}</h4>
-                  <p className="text-gray-300">{card.desc}</p>
+                <div key={card.num} className="card-surface p-8">
+                  <div className="text-4xl font-bold text-brand mb-4">{card.num}</div>
+                  <h4 className="text-xl font-bold mb-3 text-slate-900">{card.title}</h4>
+                  <p className="text-slate-600">{card.desc}</p>
                 </div>
               ))}
             </div>
@@ -67,21 +67,21 @@ export default function About() {
       </section>
 
       {/* MISSION & VISION */}
-      <section className="section bg-black bg-opacity-30">
+      <section className="section section-soft">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-accent/20 to-transparent border border-accent/30 p-10 rounded-xl">
+            <div className="card-surface p-10">
               <div className="inline-block px-3 py-1 bg-accent/20 text-accent text-sm font-semibold rounded-full mb-4">Mission</div>
               <h3 className="text-2xl font-bold mb-4">To deliver engineering solutions that are not just functional, but exceptional — built to last, built to perform.</h3>
-              <p className="text-gray-300">
+              <p className="text-slate-600">
                 We believe in the power of well-crafted systems. Every line of firmware, every PCB trace, every API endpoint — done with intention and pride.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/30 p-10 rounded-xl">
+            <div className="card-surface p-10">
               <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full mb-4">Vision</div>
               <h3 className="text-2xl font-bold mb-4">To be the go-to partner for innovators who need hardware-software expertise they can trust completely.</h3>
-              <p className="text-gray-300">
+              <p className="text-slate-600">
                 We envision a world where great engineering ideas are never held back by poor execution. Novultex exists to close that gap.
               </p>
             </div>
@@ -99,10 +99,10 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-8 rounded-xl">
-                <div className="text-2xl mb-4">◆</div>
-                <h4 className="text-xl font-bold mb-3">{value.title}</h4>
-                <p className="text-gray-300">{value.desc}</p>
+              <div key={value.title} className="card-surface p-8">
+                <div className="text-2xl mb-4 text-brand">◆</div>
+                <h4 className="text-xl font-bold mb-3 text-slate-900">{value.title}</h4>
+                <p className="text-slate-600">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function About() {
       </section>
 
       {/* FOUNDER */}
-      <section className="section bg-black bg-opacity-30">
+      <section className="section section-soft">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-32 h-32 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center flex-shrink-0">
@@ -121,10 +121,10 @@ export default function About() {
               <span className="section__tag">Founder</span>
               <h2 className="text-4xl font-bold mt-4 mb-2">Bharkkav</h2>
               <p className="text-accent font-semibold mb-4">Founder & Lead Engineer, Novultex Technologies</p>
-              <p className="text-gray-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 With deep expertise across embedded systems, IoT architecture, PCB design, and software development, Bharkkav founded Novultex Technologies to create a firm where quality engineering and client satisfaction are never in conflict.
               </p>
-              <blockquote className="text-lg italic text-gray-300 border-l-4 border-accent pl-4 mb-6">
+              <blockquote className="text-lg italic text-slate-600 border-l-4 border-brand pl-4 mb-6">
                 &ldquo;I started Novultex because I believe that real engineering - careful, tested, well-thought-out engineering - can solve almost any problem. Every client who brings us a challenge gets my personal commitment to making it work.&rdquo;
               </blockquote>
               <Link href="/contact" className="btn btn--primary">
@@ -136,18 +136,18 @@ export default function About() {
       </section>
 
       {/* CTA BAND */}
-      <section className="bg-gradient-to-r from-accent to-accent/80 text-black py-16">
+      <section className="cta-band py-16">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Have a Project in Mind?</h2>
-              <p className="text-lg opacity-90">We&apos;d love to hear about it. Share your idea and let&apos;s explore how Novultex can bring it to life.</p>
+              <p className="text-lg text-white/90">We&apos;d love to hear about it. Share your idea and let&apos;s explore how Novultex can bring it to life.</p>
             </div>
             <div className="flex flex-col md:flex-row gap-4 flex-shrink-0">
-              <Link href="/contact#quote" className="btn bg-black text-white hover:bg-opacity-90">
+              <Link href="/contact#quote" className="btn btn--white">
                 Get a Quote
               </Link>
-              <Link href="/services" className="btn border-2 border-black text-black hover:bg-black hover:text-white">
+              <Link href="/services" className="btn btn--ghost-white">
                 Our Services
               </Link>
             </div>
