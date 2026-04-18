@@ -39,9 +39,9 @@ export default function Navigation() {
           <Image
             src="/assets/company-logo.png"
             alt="Novultex logo"
-            width={32}
-            height={32}
-            className="h-8 w-8 object-contain"
+            width={48}
+            height={48}
+            className="h-12 w-12 object-contain"
             priority
           />
           <span className="font-bold text-xl tracking-tight">Novultex</span>
