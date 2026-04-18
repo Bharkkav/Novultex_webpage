@@ -171,7 +171,7 @@ export default function Contact() {
 
                 <div className="form-group">
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Project Description
+                    Project Description <span className="text-slate-500">(optional)</span>
                   </label>
                   <textarea
                     id="message"

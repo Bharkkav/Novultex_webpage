@@ -145,7 +145,7 @@ body {
 
 /* FORM STYLES */
 .form-group {
-  @apply mb-6;
+  @apply mb-0;
 }
 
 .form-group label {
