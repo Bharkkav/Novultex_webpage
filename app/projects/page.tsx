@@ -101,13 +101,13 @@ export default function Projects() {
       <Navigation />
 
       {/* PAGE HERO */}
-      <section className="min-h-[60vh] flex items-center justify-center pt-32">
+      <section className="min-h-[60vh] flex items-center justify-center pt-24 md:pt-32">
         <div className="container text-center">
           <span className="section__tag">Our Work</span>
-          <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6">
             Projects That<br /><em className="text-accent">Speak for Themselves</em>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
             A selection of systems we&apos;ve built - embedded hardware, IoT platforms, PCB designs, and software solutions delivered to clients across the globe.
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function Projects() {
           {/* PROJECT MODAL */}
           {selectedProject && (
             <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => setSelectedProject(null)}>
-              <div className="bg-white border border-sky-100 rounded-xl p-8 max-w-2xl w-full shadow-2xl shadow-slate-900/10 relative" onClick={(e) => e.stopPropagation()}>
+              <div className="bg-white border border-sky-100 rounded-xl p-6 md:p-8 max-w-2xl w-full shadow-2xl shadow-slate-900/10 relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="absolute top-4 right-4 text-3xl text-slate-400 hover:text-primary"
@@ -180,8 +180,8 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 text-slate-900">{selectedProject.title}</h3>
-                <p className="text-slate-600 mb-6 text-lg">{selectedProject.desc}</p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">{selectedProject.title}</h3>
+                <p className="text-slate-600 mb-6 text-base md:text-lg">{selectedProject.desc}</p>
 
                 <div className="mb-6">
                   <h4 className="font-bold mb-3 text-accent">Technologies</h4>

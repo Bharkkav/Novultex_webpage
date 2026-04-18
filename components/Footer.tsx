@@ -30,9 +30,9 @@ export default function Footer() {
                 alt="Novultex logo"
                 width={76}
                 height={76}
-                className="h-[76px] w-[76px] object-contain"
+                className="h-[58px] w-[58px] md:h-[76px] md:w-[76px] object-contain flex-shrink-0"
               />
-              <span className="font-bold text-lg">Novultex</span>
+              <span className="font-bold text-base md:text-lg">Novultex</span>
             </Link>
             <p className="text-slate-600 text-sm mb-4">
               Engineering embedded, IoT, and software solutions that connect the physical and digital world.

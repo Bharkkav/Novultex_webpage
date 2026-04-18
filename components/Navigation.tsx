@@ -33,18 +33,20 @@ export default function Navigation() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg shadow-sky-100/80 border-b border-sky-100' : 'bg-white/60 backdrop-blur-sm'}`}>
-      <div className="container flex items-center justify-between h-20">
+      <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 no-underline">
+        <Link href="/" className="flex items-center gap-2 md:gap-3 no-underline min-w-0">
           <Image
             src="/assets/company-logo.png"
             alt="Novultex logo"
             width={80}
             height={80}
-            className="h-20 w-20 object-contain"
+            className="h-12 w-12 md:h-20 md:w-20 object-contain flex-shrink-0"
             priority
           />
-          <span className="font-bold text-xl tracking-tight text-slate-900">Novultex</span>
+          <span className="font-bold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 whitespace-nowrap">
+            Novultex
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -71,7 +73,7 @@ export default function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col gap-1 p-2"
+          className="md:hidden flex flex-col gap-1 p-2 flex-shrink-0"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >

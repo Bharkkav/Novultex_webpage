@@ -74,13 +74,13 @@ export default function Contact() {
       <Navigation />
 
       {/* PAGE HERO */}
-      <section className="min-h-[60vh] flex items-center justify-center pt-32">
+      <section className="min-h-[60vh] flex items-center justify-center pt-24 md:pt-32">
         <div className="container text-center">
           <span className="section__tag">Contact</span>
-          <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6">
             Let&apos;s Build Something<br /><em className="text-accent">Together</em>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
             Share your project idea, ask a technical question, or request a quote. We respond to every message personally — usually within 24 hours.
           </p>
         </div>

@@ -119,13 +119,13 @@ export default function Services() {
       <Navigation />
 
       {/* PAGE HERO */}
-      <section className="min-h-[60vh] flex items-center justify-center pt-32">
+      <section className="min-h-[60vh] flex items-center justify-center pt-24 md:pt-32">
         <div className="container text-center">
           <span className="section__tag">Services</span>
-          <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6">
             What Novultex<br /><em className="text-accent">Builds For You</em>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
             From a single embedded component to a complete IoT ecosystem — we deliver engineering with depth, precision, and professionalism.
           </p>
         </div>
@@ -137,11 +137,11 @@ export default function Services() {
           {services.map((service, idx) => (
             <div key={service.id} id={service.id}>
               <div className="mb-8">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="text-5xl font-bold text-accent">{service.num}</div>
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-8">
+                  <div className="text-4xl md:text-5xl font-bold text-accent">{service.num}</div>
                   <div>
-                    <h2 className="text-4xl font-bold mb-2">{service.title}</h2>
-                    <p className="text-lg text-slate-600">{service.subtitle}</p>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">{service.title}</h2>
+                    <p className="text-base md:text-lg text-slate-600">{service.subtitle}</p>
                   </div>
                 </div>
 

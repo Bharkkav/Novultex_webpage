@@ -19,13 +19,13 @@ export default function About() {
       <Navigation />
 
       {/* PAGE HERO */}
-      <section className="min-h-[60vh] flex items-center justify-center pt-32">
+      <section className="min-h-[60vh] flex items-center justify-center pt-24 md:pt-32">
         <div className="container text-center">
           <span className="section__tag">About Us</span>
-          <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6">
             The Team Behind<br /><em className="text-accent">Novultex Technologies</em>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
             We are a focused engineering company dedicated to building customized embedded, IoT, and software systems that actually work — in the real world, for real clients.
           </p>
         </div>
@@ -113,8 +113,8 @@ export default function About() {
       <section className="section section-soft">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-32 h-32 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center flex-shrink-0">
-              <div className="text-6xl font-bold text-accent">B</div>
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center flex-shrink-0">
+              <div className="text-5xl md:text-6xl font-bold text-accent">B</div>
             </div>
 
             <div>

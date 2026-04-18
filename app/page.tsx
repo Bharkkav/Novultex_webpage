@@ -70,14 +70,14 @@ export default function Home() {
       <Navigation />
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center pt-20 md:pt-24 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_left,rgba(22,150,219,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(31,184,122,0.18),transparent_30%)]"></div>
         <div className="container text-center relative z-10">
           <p className="text-brand text-sm font-semibold uppercase tracking-[0.25em] mb-4">Embedded · IoT · Software · PCB</p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900">
             Engineering Ideas<br /><em className="text-primary not-italic">Into Reality</em>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
             Novultex Technologies builds customized embedded systems, complete IoT solutions, professional PCB designs, and software that powers your vision — from concept to deployment.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -124,7 +124,7 @@ export default function Home() {
                 ref={(el) => setRefs(el, card.num)}
                 className="fade-in card-surface p-8 hover:border-brand hover:shadow-lg hover:shadow-sky-100 transition-all duration-300"
               >
-                <div className="text-4xl mb-4 text-primary">{card.icon}</div>
+                <div className="text-3xl md:text-4xl mb-4 text-primary">{card.icon}</div>
                 <h3 className="text-xl font-bold mb-4 text-slate-900">{card.title}</h3>
                 <p className="text-slate-600 mb-6">{card.desc}</p>
                 <Link href="/services" className="link-arrow">
