@@ -20,9 +20,9 @@ export default function Footer() {
               <Image
                 src="/assets/company-logo.png"
                 alt="Novultex logo"
-                width={60}
-                height={60}
-                className="h-[60px] w-[60px] object-contain"
+                width={76}
+                height={76}
+                className="h-[76px] w-[76px] object-contain"
               />
               <span className="font-bold text-lg">Novultex</span>
             </Link>
