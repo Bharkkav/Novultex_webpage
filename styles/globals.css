@@ -189,11 +189,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-brand rounded-full;
+  @apply bg-slate-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-opacity-80;
+  @apply bg-slate-500;
 }
 
 /* RESPONSIVE */
