@@ -141,7 +141,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Your company name (optional)"
+                    placeholder="Your company name"
                     className="w-full px-4 py-3 rounded-lg bg-white border border-sky-100 text-slate-900 placeholder-slate-400 focus:border-brand focus:ring-2 focus:ring-sky-200 transition-all"
                   />
                 </div>
