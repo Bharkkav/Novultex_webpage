@@ -6,12 +6,12 @@ import Link from 'next/link'
 
 export default function About() {
   const values = [
-    { title: 'Precision', desc: 'We sweat the details others overlook. Signal integrity, edge cases, error handling — all of it matters to us.' },
-    { title: 'Transparency', desc: 'Honest timelines, clear communication, and no surprises. You always know where your project stands.' },
-    { title: 'Ownership', desc: 'We treat your project as if it were ours. Success is not just your goal — it\'s ours too.' },
-    { title: 'Innovation', desc: 'We stay current with technology so our solutions are never outdated before they launch.' },
-    { title: 'Reliability', desc: 'Deadlines matter. Commitments are kept. Our track record speaks for this.' },
-    { title: 'Collaboration', desc: 'We work with you, not just for you. Your domain knowledge combined with our technical depth produces better results.' },
+    { icon: '🎯', title: 'Precision', desc: 'We sweat the details others overlook. Signal integrity, edge cases, error handling — all of it matters to us.' },
+    { icon: '🔎', title: 'Transparency', desc: 'Honest timelines, clear communication, and no surprises. You always know where your project stands.' },
+    { icon: '🛡️', title: 'Ownership', desc: 'We treat your project as if it were ours. Success is not just your goal — it\'s ours too.' },
+    { icon: '💡', title: 'Innovation', desc: 'We stay current with technology so our solutions are never outdated before they launch.' },
+    { icon: '✅', title: 'Reliability', desc: 'Deadlines matter. Commitments are kept. Our track record speaks for this.' },
+    { icon: '🤝', title: 'Collaboration', desc: 'We work with you, not just for you. Your domain knowledge combined with our technical depth produces better results.' },
   ]
 
   return (
@@ -100,7 +100,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
               <div key={value.title} className="card-surface p-8">
-                <div className="text-2xl mb-4 text-brand">◆</div>
+                <div className="text-4xl mb-4">{value.icon}</div>
                 <h4 className="text-xl font-bold mb-3 text-slate-900">{value.title}</h4>
                 <p className="text-slate-600">{value.desc}</p>
               </div>

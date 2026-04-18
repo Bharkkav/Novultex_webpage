@@ -133,7 +133,7 @@ export default function Contact() {
 
                 <div className="form-group">
                   <label htmlFor="company" className="block text-sm font-medium mb-2">
-                    Company / Organization
+                    Company / Organization <span className="text-slate-500">(optional)</span>
                   </label>
                   <input
                     type="text"
@@ -156,9 +156,11 @@ export default function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-white border border-sky-100 text-slate-900 focus:border-brand focus:ring-2 focus:ring-sky-200 transition-all"
+                    className={`w-full px-4 py-3 rounded-lg bg-white border border-sky-100 focus:border-brand focus:ring-2 focus:ring-sky-200 transition-all ${
+                      formData.service ? 'text-slate-900' : 'text-slate-400'
+                    }`}
                   >
-                    <option value="">Select a service</option>
+                    <option value="" className="text-slate-400">Select a service</option>
                     <option>Embedded & IoT Systems</option>
                     <option>PCB Design & Prototyping</option>
                     <option>Software Development</option>
