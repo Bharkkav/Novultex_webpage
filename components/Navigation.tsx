@@ -32,7 +32,7 @@ export default function Navigation() {
   ]
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[linear-gradient(90deg,rgba(44,190,123,0.14)_0%,rgba(22,150,219,0.18)_100%)] backdrop-blur-md shadow-lg shadow-sky-100/80 border-b border-sky-100' : 'bg-[linear-gradient(90deg,rgba(44,190,123,0.10)_0%,rgba(22,150,219,0.12)_100%)] backdrop-blur-sm'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(22,150,219,0.18)_100%)] backdrop-blur-md shadow-lg shadow-sky-100/80 border-b border-sky-100' : 'bg-[linear-gradient(90deg,rgba(255,255,255,0.90)_0%,rgba(22,150,219,0.12)_100%)] backdrop-blur-sm'}`}>
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 md:gap-3 no-underline min-w-0">
